@@ -14,7 +14,9 @@ import { FooterComponent } from './footer/footer.component';
 import { CadastroClientesComponent } from './cadastro-clientes/cadastro-clientes.component';
 import { HomeLogadaComponent } from './home-logada/home-logada.component';
 import { AcessoNegadoComponent } from './acesso-negado/acesso-negado.component';
-import { CadastroConcluidoComponent } from './cadastro-concluido/cadastro-concluido.component'
+import { CadastroConcluidoComponent } from './cadastro-concluido/cadastro-concluido.component';
+import { LoginComponent } from './login/login.component';
+import { ModalNotCadastroComponent } from './modal-not-cadastro/modal-not-cadastro.component'
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { CadastroConcluidoComponent } from './cadastro-concluido/cadastro-conclu
     CadastroClientesComponent,
     HomeLogadaComponent,
     AcessoNegadoComponent,
-    CadastroConcluidoComponent
+    CadastroConcluidoComponent,
+    LoginComponent,
+    ModalNotCadastroComponent
   ],
   imports: [
     BrowserModule,

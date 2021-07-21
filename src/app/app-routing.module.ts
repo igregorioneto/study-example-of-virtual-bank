@@ -1,3 +1,4 @@
+import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './auth.guard';
 import { AcessoNegadoComponent } from './acesso-negado/acesso-negado.component';
 import { HomeLogadaComponent } from './home-logada/home-logada.component';
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'cadastro-concluido', component: CadastroConcluidoComponent },
   { path: 'home-logada', component: HomeLogadaComponent, canActivate: [AuthGuard] },
   { path: 'acesso-negado', component: AcessoNegadoComponent },
+  { path: 'login', component: LoginComponent },
 ];
 
 @NgModule({

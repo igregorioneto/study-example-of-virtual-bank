@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
+import { AuthService } from './auth.service';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +9,7 @@ import { Observable } from 'rxjs';
 export class AuthGuard implements CanActivate {
   base_url: string = '';
   constructor(private authService: AuthService, private router: Router){}
-  canActivate(){
+  canActivate(): any{
     if(this.authService.isAuthenticated()) {
       return true
     } else {

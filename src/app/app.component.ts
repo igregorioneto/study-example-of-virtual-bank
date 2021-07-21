@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { ServicesService } from './services.service';
+import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog'
 
 @Component({
@@ -6,10 +7,13 @@ import { MatDialog } from '@angular/material/dialog'
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'traning-bank';
+export class AppComponent implements OnInit{
+  isShow: boolean = true;
 
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog, private credentials: ServicesService) {}
+  ngOnInit(): void {
+    this.isShow = this.credentials.getCredentials()
+  }
 
   openDialog() {
     const dialogRef = this.dialog.open(AppComponent,{
